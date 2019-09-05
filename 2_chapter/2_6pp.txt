@@ -1,0 +1,17 @@
+3510593
+hex: 0x00359141
+
+3510593.0
+hex: 0x4A564503
+
+A. Write binary representation of these two.
+first hex:  0000 0000 0011 0101 1001 0001 0100 0001
+second hex: 0100 1010 0101 0110 0100 0101 0000 0011
+
+B. How many bits match?
+00000000001101011001000101000001
+  01001010010101100100010100000011
+18?
+
+C. What parts of the strings do not match?
+First 11 and last 2 bits.

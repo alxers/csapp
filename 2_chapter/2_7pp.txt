@@ -1,0 +1,13 @@
+What would be printed?
+
+const char *s = "abcdef";
+show_bytes((byte_pointer) s, strlen(s));
+
+'a' ASCII 0x61
+'b' 0x62
+'c' 0x63
+'d' 0x64
+'e' 0x65
+'f' 0x66
+
+61 62 63 64 65 66
