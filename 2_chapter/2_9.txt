@@ -1,0 +1,20 @@
+R G B Color
+0 0 0 black
+0 0 1 blue
+0 1 0 green
+0 1 1 cyan
+1 0 0 red
+1 0 1 magenta
+1 1 0 yellow
+1 1 1 white
+
+A. Complement color of each of the above (complement of a color is formed by turning off the lights that are on and turning on the lights that are off)
+000 black -> 111 white
+001 blue -> 110 yellow
+010 green -> magenta
+011 cyan -> 100 red
+
+B.
+blue | green = 001 | 010 = 011 = cyan
+yellow & cyan = 110 & 011 = 010 = green
+red ^ magenta = 100 ^ 101 = 001 = blue
