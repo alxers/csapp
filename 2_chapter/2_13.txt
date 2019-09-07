@@ -1,0 +1,33 @@
+bis (bis set), bic (bit clear).
+Both take a data word 'x' and mask word 'm' and produce result 'z'.
+With bis z set to 1 at each bit position where m is 1.
+With bic z set to 0 at each bit position where m is 1.
+
+
+int bis(int x, int m);
+int bic(int x, int m);
+
+======
+1011 ^ 0110 = 1101
+
+x = 1011
+y = 0110
+
+======
+
+1011
+0110
+
+1101
+
+int bool_or(int x, int y)
+{
+  int result = bis(x, y);
+  return result;
+}
+
+int bool_xor(int x, int y)
+{
+  int result = bic(x, y);
+  return result;
+}

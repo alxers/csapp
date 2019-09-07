@@ -1,0 +1,33 @@
+Write C expression in terms of x (it should work for any word size w >= 8):
+(for reference, x = 0x87654321, with w = 32).
+
+A. The least significant byte of x, with all other bits set to 0. [0x00000021].
+x & 0xFF.
+
+B. All but the least significant byte of x complemented, with the least significant byte left unchanged. [0x789ABC21].
+1000 0111 0110 0101 0100 0011 0010 0001
+0111 1000 1001 1010 1011 1100 0010 0001
+
+~
+1000 0111 0110 0101 0100 0011 0010 0001
+0111 1000 1001 1010 1011 1100 1101 1110 (~x);
+
+x ^ 0xFF
+1000 0111 0110 0101 0100 0011 0010 0001
+0000 0000 0000 0000 0000 0000 1111 1111
+
+1000 0111 0110 0101 0100 0011 1101 1110 = y;
+Then ~y
+0111 1000 1001 1010 1011 1100 0010 0001
+
+Answer: ~(x ^ 0xFF)
+
+C. The least significant byte set to all 1s, and all other bytes of x left unchanged. [0x876543FF].
+1000 0111 0110 0101 0100 0011 0010 0001
+1000 0111 0110 0101 0100 0011 1111 1111
+
+x | 0xFF
+1000 0111 0110 0101 0100 0011 0010 0001
+0000 0000 0000 0000 0000 0000 1111 1111
+
+1000 0111 0110 0101 0100 0011 1111 1111

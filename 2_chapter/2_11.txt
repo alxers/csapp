@@ -1,0 +1,17 @@
+void reverse_array(int a[], int cnt)
+{
+  int first, last;
+  for (first = 0, last = cnt - 1; first <= last; first++, last--)
+  {
+    inplace_swap(&a[first], &a[last]);
+  }
+}
+
+A. For an array of odd length cnt = 2k + 1, what are the values of first, last in the final iteration?
+For an array [1, 2, 3, 4, 5] in the last iteration: first = 2, last = 2;
+
+B. Why does this call to function inplace_swap set the array element to 0?
+It swaps element with itself, f.e. 2 ^ 2 = 0;
+
+C. How to fix this?
+first <= last -> first < last;
