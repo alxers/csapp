@@ -1,0 +1,10 @@
+Assume 32-bit machine that uses two's-complement arithmetic.
+
+Ex                            Type       Evaluation
+-2147483647-1 == 2147483648U  unsigned   true
+-2147483647-1 <  2147483647   signed     true
+-2147483647-1U < 2147483647   unsigned   false (?)
+-2147483647-1  < -2147483647  signed     true
+-2147483647-1U < -2147483647  unsigned   false
+0x80000000       0x
+2147483648
