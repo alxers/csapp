@@ -1,0 +1,17 @@
+int fun1(unsigned word) {
+  return (int) ((word << 24) >> 24);
+}
+
+int fun2(unsigned word) {
+  return ((int) word << 24) >> 24;
+}
+
+Assume 32-bit word size and two's complement arithmetic. Right shifts of signed values are performed arithmetically,
+right shifts of unsigned logically.
+
+w                 fun1(w)      fun2(w)
+0x00000076        0x00000076   0x11111176
+0x87654321        0x00000021   0x11111121
+0x000000C9        0x000000C9   0x111111C9
+0xEDCBA987        0x00000087   0x11111187
+
