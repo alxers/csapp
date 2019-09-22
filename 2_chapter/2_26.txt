@@ -1,0 +1,19 @@
+Determine whether one string is longer than another.
+
+size_t strlen(const char *s);
+
+
+int strlonger(char *s, char *t) {
+  return strlen(s) - strlen(t) > 0;
+}
+
+(size_t is defined to be usigned int)
+
+A. For what cases will this function produce an incorrect result?
+strlen(0) - strlen(1) = -1 (unsigned), so it would be 2^31
+
+B. Explain how this incorrect result comes about.
+We compare 2^31 and 0 as unsigned
+
+C. Show how to fix the code so that it will work reliably.
+(int) strlen(s) - (int) strlen(t) > 0;

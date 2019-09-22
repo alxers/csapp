@@ -1,0 +1,16 @@
+Write a function with the following prototype:
+
+// Determine whether arguments can be added without overflow
+int uadd_ok(unsigned x, unsigned y) {
+  unsigned s;
+  s = x + y;
+  return (s > x) || (s > y);
+}
+
+This function should return 1 if arguments x and y can be added without causing overflow.
+
+
+4-bit representation with x = 9 and y = 12, in bit representation [1001] and [1100].
+Their sum is 21, it's a 5-bit [10101]. But we discard higher order bit, we get [0101], which is 5 in decimals.
+This matches the value 21 mod 16 = 5.
+

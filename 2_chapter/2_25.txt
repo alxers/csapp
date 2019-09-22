@@ -1,0 +1,17 @@
+float sum_elements(float a[], unsigned length) {
+  int i;
+  float result = 0;
+
+  for(i = 0; i <= length-1; i++) {
+    result += a[i];
+  }
+  return result;
+}
+
+When run with argument length = 0, this should return 0.0. Instead it's a memory error.
+
+
+1) int i and unsigned length
+-1 = 4,294,967,295
+
+In order to fix this we can treat 'length' as an int.
