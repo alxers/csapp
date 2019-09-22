@@ -1,0 +1,40 @@
+Give the integer values of the 5-bit arguments, the values of both their integer and two's-complement sums,
+the bit-level representation of the two's-complement sum, and the case from the deriviation of equation 2.14.
+
+x        y        x+y       x+(t_5)y   Case
+-12      -15      -27       5          1(negative overflow)
+[10100]  [10001]  [100101]  [00101]
+
+-8       -8       -16       -16        2
+[11000]  [11000]  [10000]   [10000]
+
+
+-9       8        -1        -1         2
+[10111]  [01000]  [11111]   [11111]
+
+
+2        5        7         7          3
+[00010]  [00101]  [00111]   [00111]
+
+
+12       4        16        -16        4(positive oveflow)
+[01100]  [00100]  [010000]  [10000]
+
+
+Notes:
+- The w-bit two's-complement sum of two numbers has the exact same bit-level representaion as the unsigned sum.
+- We avoid ever-expanding data sizes by truncating the representation to w bits.
+
+-- Define two's-complement addition for word size w, denotes as (t+w)
+x (t+x) y = U2T_w[(x + y) mod 2^w]
+
+Equation 2.14
+x (t+x) y = {
+  if 2^(w-1) <= x + y
+    then x + y - 2^w (positive overflow)
+  if -2^(w-1) <= x + y < 2^(w-1)
+    then x + y (normal)
+  if x + y < -2^(w-1)
+    then x + y + 2^w (negative overflow)
+}
+

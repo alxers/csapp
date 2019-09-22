@@ -1,0 +1,16 @@
+w = 4
+fill in the table giving the values and the bit representation (in hex) of the unsigned additive inverses of the digits shown.
+
+x                    -u_4 x
+
+Hex    Decimals     Decimal     Hex
+0      0            0           0
+5      5            11          B
+8      8            8           8
+D      13           3           3
+F      15           1           1
+
+
+Equation 2.12
+
+-u_4 x = { if x = 0 x, if x > 0 2^w - x }

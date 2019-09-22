@@ -1,0 +1,35 @@
+// Determine wheter arguments can be added without overflow
+// This code is buggy
+
+// function should return 1 if they can be added without overflow
+
+int tadd_ok(int x, int y) {
+  int sum = x+y;
+  return (sum-x == y) && (sum-y == x);
+}
+
+Notes:
+Assume 4-bit word size
+1 case:
+x and y are negative oveflow
+-8 -5 = -13 (3)
+
+3+8 == -5 (which is false => function will return 0, which is correct)
+
+2 case:
+-8 + 5 = -3
+-3+8 == 5 && -3-5 == -8 (will return 1, which is correct)
+it should return 1, they can be added without overflow
+
+
+3 case:
+2 + 5 = 7
+7-2 == 5 && 7-5 == 2 (will return 1, which is correct)
+
+
+4 case:
+5 + 5 = 10 (-6)
+-6 - 5 = -11 (5)
+5 == 5 && 5 == 5 (will return 1, which is not correct)
+
+[1010] [1011] = [10101] (after truncation [0101])

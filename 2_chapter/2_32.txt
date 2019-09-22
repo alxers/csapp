@@ -1,0 +1,49 @@
+// Function should return 1 if computing x-y does not cause overflow
+
+// Determine whether arguments can be subtracted without overflow
+// This code is buggy
+
+int tsub(int x, int y) {
+  return tadd_ok(x, -y);
+}
+
+For what values of x and y will this function give incorrect results?
+
+
+Function from ex. 2.30
+
+int tadd_ok(int x, int y)
+{
+  int sum = x + y;
+  if(x > 0 && y > 0 && sum < 0)
+  {
+    return 0;
+  }
+
+  if(x < 0 && y < 0 && sum > 0)
+  {
+    return 0;
+  }
+
+  return 1;
+}
+
+
+Notes:
+
+Checking cases from 2.24
+x = -8 and y = -8
+tadd_ok will recieve x = -8, y = 8 (result is 0, function will return 1 which is correct)
+
+x = -8, y = -5
+tadd_ok will recieve x = -8, y = 5
+
+
+x = -8, y = 5
+tadd_ok will recieve x = -8, y = -5 (negative overflow -13, which is 3 after truncation)
+
+
+x = 2, y = 5
+tadd_ok will recieve x = 2, y = -5
+
+
