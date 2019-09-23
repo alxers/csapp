@@ -46,4 +46,7 @@ tadd_ok will recieve x = -8, y = -5 (negative overflow -13, which is 3 after tru
 x = 2, y = 5
 tadd_ok will recieve x = 2, y = -5
 
-
+CORRECT ANSWER: there is a problem when y = Tmin = -16 = [1000] (in case 4-bit word size)
+When x = -1 and y = -16, it's passed to tadd_ok as x = -1 and y = -(-16)=16 which is overflow
+[01000] after it's truncated to [1000] which is -16 again. And we get -1 -16 - overflow.
+So it supposed to be -1 + 16 (no overflow), but we get -1 -16 instead (overflow)
