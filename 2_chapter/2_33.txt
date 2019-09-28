@@ -1,0 +1,32 @@
+For two's complement interpretation of these digits, fill in the table to determine the additive inverses of the digits shown.
+
+
+x                   -(t_4)x
+Hex    Decimal      Decimal     Hex
+0	   0            0           0
+5      5            5           5  
+8      -8           -8          8
+D      -3           3           3
+F      -1           1           1
+
+
+Equation 2.15
+-(t_4)x = {
+	-2^(w-1), x = -2^(w-1)
+	-x,       x > -2^(w-1)
+}
+
+8 hex
+1000
+
+-8
+
+D hex (two's complement) is negative (all two's complement hex > 7 are negative)
+1101 (bit representation)
+
+-8 + 4 + 1 = -3
+
+F hex
+1111
+
+-8 + 4 + 2 + 1 = -1
