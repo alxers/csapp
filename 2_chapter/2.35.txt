@@ -1,0 +1,28 @@
+// Develop tmult_ok that will determine whether two arguments can be multiplied without causing overflow.
+
+int tmult_ok(int x, int y) {
+	int p = x * y;
+	return !x || p/x == y;
+}
+
+// Devise a mathematical justification of this approach:
+// Argue that the case x = 0 is handled correctly.
+// Otherwise, consider w-bit numbers x (x != 0), y, p, and q, where
+// p is the result of performing two's complement multiplication on x and y
+// and q is the result of dividing p by x.
+
+
+// 1. Show that x * y, the integer product of x and y, can be written
+// in the form x * y = p + t2^w, where t != 0 if and only if
+// the computation of p overflows.
+
+// 2. Show that p can be written in the form p = x * q + r, where |r| < |x|.
+
+// 3. Show that q = y if and only if r = t = 0.
+
+
+// Answer:
+
+If x = 0, then p = 0 * y = 0, so no overflow.
+If x != 0, then p = x * y = U2T_w((x * y) mod 2^w).
+???
