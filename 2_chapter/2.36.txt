@@ -1,0 +1,9 @@
+For the case where data type int has 32 bits, devise a version of tmult_ok that uses the 64-bit precision of data type long long, without using division.
+
+int tmult_ok(int x, int y) {
+	x = (long long)x;
+	y = (long long)y;
+	long long p = x * y;
+	// If casting "p" back to 32-bit changes the value, then it overflows
+	return !x || p == (int)p;
+}

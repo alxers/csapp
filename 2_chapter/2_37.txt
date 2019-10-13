@@ -1,0 +1,26 @@
+Eliminate the possibility of the multiplication overflowing (on a 32-bit machine).
+
+long long unsigned asize = 
+	ele_cnt * (long long unsigned) ele_size;
+
+void *result = malloc(asize);
+
+A. Does this code provide any improvement over the original?
+
+B. How would you change the code to eliminate the vulnerability, assuming data type size_t is the same as unsigned int, and these are 32 bits long?
+
+
+Answer:
+A. When int is multiplied by long long unsigned does it casts to int?
+
+The actual answer: It won't help, call to malloc will cause this value to be converted to a 32-bit value (so indeed it will cast long long to int).
+
+B. long long unsigned asize = 
+	(long long) ele_cnt * (long long unsigned) ele_size;
+
+	if( asize == (int)asize)
+	{
+		do the allocation
+	} else {
+		return 1;
+	}
