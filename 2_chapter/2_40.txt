@@ -3,5 +3,5 @@ For each of the following values of K, find ways to express x * K using only the
 K		Shifts		Add/Subs		Expression
 6		2			1				((x << 1) + x) << 1 or (x << 2) + x << 1
 31		1			1				(x << 5) - x
--6		2			1				
+-6		2			1				(x << 1) - (x << 3)
 55		2			2				
