@@ -18,3 +18,6 @@ int optarith(int x, int y) {
 }
 
 What are the values of M and N?
+
+Example: x = 2, y = 3
+x = 62, y = 0, x + y = 62
