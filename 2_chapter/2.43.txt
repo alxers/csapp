@@ -23,3 +23,15 @@ This part below
 x <<= 5;
 x -= t;
 look like "(x << 5) - x" from ex. 2.40, and this was multiplying by 31
+So M = 31
+
+For N:
+If y = 10, then y>>=3 in binary is 0000 0001 (which is 1)
+If y = 8, then y>>=3 in binary is 0000 0001
+If y = 7, then y>>=3 in binary is 0000 0000
+If y = 16, then y>>=3 in binary is 0000 0010 (which is 2)
+So this must be 8, check for negative y.
+If y = -16, then y+=7 is -9, -9 in binary is 1111 0111, then we shift
+>>=3, so it's 1111 1110 (which is -2).
+
+N = 8
