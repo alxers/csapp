@@ -6,9 +6,22 @@ int y = bar(); // Arbitrary value
 unsigned ux = x;
 unsigned uy = y;
 
-For each of the following C expressions, either argume that it is true (evaluates to 1) for all values of x and y, or give values of x and y for which it is false.
+For each of the following C expressions, either argue that it is true (evaluates to 1) for all values of x and y, or give values of x and y for which it is false.
 
 A. (x > 0) || (x-1 < 0)
 B. (x & 7) !=7 || (x<<29 < 0)
 C. (x * x) >= 0
 D. x < 0 || -x <= 0
+E. x > 0 || -x >= 0
+F. x+y == uy+ux
+G. x*~y + uy*ux == -x
+
+
+А. true
+1) If x > 0, then true
+2) If x < 0, then true
+3) If x = 1, then true
+4) If x = 0, then true
+
+B. 
+7 in binary is 0111
