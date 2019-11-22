@@ -25,3 +25,10 @@ G. x*~y + uy*ux == -x
 
 B. 
 7 in binary is 0111
+
+C. true
+
+D. false for x = 0
+1) If x < 0 => true
+2) If x > 0 => true
+3) If x = 0 => false
