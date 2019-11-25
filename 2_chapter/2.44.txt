@@ -28,7 +28,12 @@ B.
 
 C. true
 
-D. false for x = 0
+D. true
 1) If x < 0 => true
 2) If x > 0 => true
-3) If x = 0 => false
+3) If x = 0 => true
+
+E. 
+1) If x < 0 => true
+2) If x > 0 => true
+3) If x = 0 => true
