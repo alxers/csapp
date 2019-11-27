@@ -38,6 +38,10 @@ E.
 2) If x > 0 => true
 3) If x = 0 => true
 
-F.
+F. false if x = -1, y = -1 ?
 1) Possible problematic value FFFF FFFF, 4294967295 decimal, -1 two's-complement decimal
 If int x = -1, then ux = 4294967295 ?
+f.e. for y = 0, x + y = -1, ux + uy = 4294967295, x+y == uy+ux is true?
+for y = 1, x + y = 0, ux + uy overflows, x+y == uy+ux is true?
+for y = -1, x + y = -2, ux + uy = 4294967294, x+y == uy+ux cast to unsigned?
+false
