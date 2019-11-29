@@ -1,0 +1,6 @@
+Fill in missing info:
+
+Fractional value	Binary representation	Decimal representation
+1/8					0.001					0.125
+3/4
+25/16

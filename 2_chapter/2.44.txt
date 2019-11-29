@@ -23,7 +23,7 @@ G. x*~y + uy*ux == -x
 3) If x = 1, then true
 4) If x = 0, then true
 
-B. false when x = ?
+B. false when x = 0 ?
 7 in binary is 0111
 1) If x = 0, 0 & 0111 = 0, 0 != 7, x << 29 = 0, 0 < 0? false
 
