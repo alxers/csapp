@@ -2,5 +2,5 @@ Fill in missing info:
 
 Fractional value	Binary representation	Decimal representation
 1/8					0.001					0.125
-3/4
-25/16
+3/4					11.01					0.75
+25/16				11001.0001				1.5625
