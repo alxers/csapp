@@ -7,6 +7,7 @@ Fractional value	Binary representation	Decimal representation
 43/16				10.1011					2.6875
 9/8					1.001					1.125
 47/8				101.111					5.875
+											3.1875
 
 Notes:
 
