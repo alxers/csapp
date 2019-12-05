@@ -2,7 +2,7 @@ Fill in missing info:
 
 Fractional value	Binary representation	Decimal representation
 1/8					0.001					0.125
-3/4					11.01					0.75 (binary wrong?)
+3/4					0.11					0.75 (binary wrong?)
 25/16				11001.0001				1.5625 (binary wrong?)
 43/16				10.1011					2.6875
 9/8					1.001					1.125
@@ -16,3 +16,8 @@ Notes:
 2) 0.875 * 2 = 1.750, 1 goes after 101. => 101.1
 3) 0.750 * 2 = 1.5, 1 goes after 101.1 => 101.11
 4) 0.5 * 2 = 1.0, 1 goes after 101.11 => 101.111
+
+0.75 to binary:
+1) 0.75 * 2 = 1.5
+2) 0.5 * 2 = 1.0
+0.11
