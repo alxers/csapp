@@ -1,0 +1,5 @@
+x = 0.00011001100110011001100
+
+A. What is binary representation of 0.1 - x ?
+B. What is the approximate decimal value of 0.1 - x ?
+Don't understand the question 0.1 - x ???
