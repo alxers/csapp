@@ -25,5 +25,18 @@ Bits      e     E      2^E     f     M     2^E * M     V     Decimal
 Now "e" are not all 0's => bias = 2^(k-1) - 1 = 1 (still the same)
 E = e - bias = 1 - 1 = 0 (the difference that e will be > 1 next time)
 The significand is M = 1 + f
+Why f is always n/4 ? Probably because it's treated as a fraction and 2^(number_of_bits) = 2^2 = 4 ?
 0 01 00   1     0        1    0/4   1/1         1/1   1/1       1.0
-0 01 10   
+0 01 01   1     0        1    1/4   5/4         5/4   5/4       1.25
+0 01 10   1     0        1    2/4   3/2         3/2   3/2       1.5
+0 10 00   2     1        2    0/4   1/1         2       2       2.0 <-- wrong?
+0 10 01   2     1        2    1/4   5/4         5/2   5/2       2.5
+0 10 10   2     1        2    2/4   3/2         3       3       3.0
+
+When exp is all 1's and frac is all 0's - case 3 - Special values (Infinity or NaN)
+When s = 0 => +inf, when s = 1 => -inf
+When frac is non zero => NaN
+0 11 00   +inf
+0 11 01   NaN
+0 11 10   NaN
+0 11 11   NaN
