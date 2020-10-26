@@ -1,3 +1,8 @@
 Show how the following binary fractional values would be rounded to the nearest
 half (1 bit to the right of the binary point), according to the round-to-even rule.
 In each case, show the numeric values, both before and after rounding.
+
+A. 10.010
+B. 10.011
+C. 10.110
+D. 11.001
