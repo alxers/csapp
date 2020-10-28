@@ -1,0 +1,20 @@
+Show how the following binary fractional values would be rounded to the nearest
+half (1 bit to the right of the binary point), according to the round-to-even rule.
+In each case, show the numeric values, both before and after rounding.
+
+A. 10.010
+B. 10.011
+C. 10.110
+D. 11.001
+
+
+Notes: The IEEE floating point format defines 4 ways to round numbers. The default one is "round to the nearest" (also called Round-to-even).
+F.e. it rounds $1.40 to %1 and $1.60 to $2.
+
+What about half-way numbers like $1.50?
+It rounds such that the least significant digit is an even.
+F.e. $1.50 and $2.50 both rounds to $2.
+It's done to avoid statistical bias with set of numbers.
+The problem might occur if we always round upward or downward.
+With round to even approach it's about 50% rounds upward/downward.
+This is sutable for most real-life examples.
