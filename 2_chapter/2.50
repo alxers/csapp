@@ -12,9 +12,30 @@ Notes: The IEEE floating point format defines 4 ways to round numbers. The defau
 F.e. it rounds $1.40 to %1 and $1.60 to $2.
 
 What about half-way numbers like $1.50?
-It rounds such that the least significant digit is an even.
+It rounds such that the least significant digit of *the result* is an even.
 F.e. $1.50 and $2.50 both rounds to $2.
 It's done to avoid statistical bias with set of numbers.
 The problem might occur if we always round upward or downward.
 With round to even approach it's about 50% rounds upward/downward.
 This is sutable for most real-life examples.
+
+
+Solution:
+
+A. 10.010 = 2 1/4
+2 --- 2 1/4 --- 2 1/2 it's halfway between 2 and 2 1/2
+Then we round such that least significant bit is even (zero)
+Result: 10.0 = 2
+
+B. 10.011 = 2 3/8
+2 ---- 2 3/8 - 2 1/2 it's not halfway
+Then we round as usual
+10.1 = 2 1/2
+
+C. 10.110 = 2 3/4
+2 - 2 3/4 ---- 2 1/2 it's not halfway
+Result: 10.0 = 2
+
+D. 11.001 = 3 1/8
+3 - 3 1/8 ---- 3 1/2
+Result: 11.0 = 3
