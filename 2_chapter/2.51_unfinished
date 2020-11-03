@@ -8,3 +8,9 @@ D. How far off would the program’s prediction of the position of the Scud
 missile have been?
 
 x is 0.09999990463256835938 in decimal?
+
+Solution:
+
+Value is between 0.0 and 0.1 (binary), so it's between 0.0 and 0.5 decimal
+Since x is not in between 0.0 and 0.5 we round as usual.
+x' = 0.0 (?)
