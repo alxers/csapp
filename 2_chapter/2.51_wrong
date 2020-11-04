@@ -14,3 +14,5 @@ Solution:
 Value is between 0.0 and 0.1 (binary), so it's between 0.0 and 0.5 decimal
 Since x is not in between 0.0 and 0.5 we round as usual.
 x' = 0.0 (?)
+
+This is wrong. Probably need to go back to the ex. 2.46 and check x' initial value ?
