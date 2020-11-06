@@ -14,10 +14,14 @@ and Format B bit patterns. Give these as whole numbers (e.g., 17) or as fraction
 
 A               B
 e    f     v    e     f    v
-011  0000  1    0111  000
+011  0000  1    0111  000  1
 
 
 
-Case 1)
+Case 1) A
 Since "e" are not all 0-s, then M = 1 + f - "Normalized" case (check IEEE standard definitions for normalized, denormalized and special values).
 Since f = 0, then M = 1 => Value = 1
+
+Case 1) B
+"e" are not all 0-s, M = 1 + f - "normalized".
+f = 0, M = 1 => Value = 1
