@@ -15,6 +15,7 @@ and Format B bit patterns. Give these as whole numbers (e.g., 17) or as fraction
 A               B
 e    f     v    e     f    v
 011  0000  1    0111  000  1
+101  1110  15   
 
 
 
@@ -25,3 +26,6 @@ Since f = 0, then M = 1 => Value = 1
 Case 1) B
 "e" are not all 0-s, M = 1 + f - "normalized".
 f = 0, M = 1 => Value = 1
+
+Case 2) A
+M = 1 + f. f = 14. M = 1 + 14 = 15.
