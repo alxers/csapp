@@ -15,7 +15,7 @@ and Format B bit patterns. Give these as whole numbers (e.g., 17) or as fraction
 A               B
 e    f     v    e     f    v
 011  0000  1    0111  000  1
-101  1110  15   
+101  1110     
 
 
 
@@ -28,4 +28,5 @@ Case 1) B
 f = 0, M = 1 => Value = 1
 
 Case 2) A
-M = 1 + f. f = 14. M = 1 + 14 = 15.
+M = 1 + f. f = 14/3. M = 1 + 14/3 = 3/3 + 14/3 = 17/3.
+Value is 2^e * M = 2^5 * 17/3 ??? (WRONG)
