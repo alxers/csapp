@@ -15,8 +15,8 @@ and Format B bit patterns. Give these as whole numbers (e.g., 17) or as fraction
 A               B
 e    f     v    e     f    v
 011  0000  1    0111  000  1
-101  1110  15/2    
-
+101  1110  15/2 1001  111  15/2   
+010  1001
 
 
 Case 1) A
@@ -32,3 +32,17 @@ exp = 5, frac = 1/2 + 1/4 + 1/8 = 7/8.
 E = e - Bias = 5 - 3 (??? check what "e" is here), E = 2.
 M = 1 + frac = 1 + 7/8 = 15/8.
 2^E * M = 4 * 15/8 = 15/2 = Value
+
+Case 2) B
+exp = 9, frac = 1/2 + 1/4 + 1/8 = 7/8.
+Since Bias = 7 in Format B, we still need to get E = 2.
+We make e = 9.
+E = e - Bias = 9 - 7, E = 2.
+M = 1 + frac = 1 + 7/8 = 15/8.
+2^E * M = 4 * 15/8 = 15/2 = Value
+
+Case 3) A
+exp = 2, frac = 1/2 + 1/16 = 9/16.
+E = e - Bias = 2 - 3, E = -1.
+M = 1 + frac = 1 + 9/16 = 25/16.
+2^E * M = 4 * 15/8 = 25/32 = Value
