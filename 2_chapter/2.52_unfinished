@@ -46,3 +46,7 @@ exp = 2, frac = 1/2 + 1/16 = 9/16.
 E = e - Bias = 2 - 3, E = -1.
 M = 1 + frac = 1 + 9/16 = 25/16.
 2^E * M = 4 * 15/8 = 25/32 = Value
+
+Case 3) B
+Since frac is only 3 bits for the Format B it's probably not possible to convert 25/32 directly?
+(TODO: try 25/8 * 1/2)
