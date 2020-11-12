@@ -12,11 +12,11 @@ them to the closest value in Format B. If necessary, you should apply the round-
 and Format B bit patterns. Give these as whole numbers (e.g., 17) or as fractions
 (e.g., 17/64).
 
-A               B
-e    f     v    e     f    v
-011  0000  1    0111  000  1
-101  1110  15/2 1001  111  15/2   
-010  1001
+A                 B
+e    f     v      e     f    v
+011  0000  1      0111  000  1
+101  1110  15/2   1001  111  15/2   
+010  1001  25/32
 
 
 Case 1) A
@@ -49,4 +49,7 @@ M = 1 + frac = 1 + 9/16 = 25/16.
 
 Case 3) B
 Since frac is only 3 bits for the Format B it's probably not possible to convert 25/32 directly?
-(TODO: try 25/8 * 1/2)
+Max frac in this format is 111 (binary), which is 1/2 + 1/4 + 1/8 = 7/8.
+So rounding is needed.
+1-st define which type, is it regular or round-to-even?
+To do so, we need to check between which values 25/32 is...
