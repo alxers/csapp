@@ -16,7 +16,7 @@ A                 B
 e    f     v      e     f    v
 011  0000  1      0111  000  1
 101  1110  15/2   1001  111  15/2   
-010  1001  25/32
+010  1001  25/32  0110  100  3/4
 
 
 Case 1) A
@@ -53,3 +53,13 @@ Max frac in this format is 111 (binary), which is 1/2 + 1/4 + 1/8 = 7/8.
 So rounding is needed.
 1-st define which type, is it regular or round-to-even?
 To do so, we need to check between which values 25/32 is...
+
+25/32 = 0.78125. In format B we can get M = 1 + (1/2 or 1/4 or 1/8 or their sum).
+We can have M = 1 + 1/2 = 1.5, which can be devided by 2 (if E = e - Bias = 6 - 7 = -1).
+That would be equal to 0.75 which is the closest value to the 0.78125.
+M = 1 + 1/2 + 1/4 is also possible, but it's equal to 1.75, when divided by 2 is equal to 0.875.
+Since 0.75 is closer, then:
+e = 0110, E = 6 - 7 = -1, 2^E = 1/2.
+frac = 100 = 1/2.
+M = 1 + 1/2 = 1.5.
+2^E * M = 1/2 * 1.5 = 0.75 = 3/4
