@@ -17,6 +17,7 @@ e    f     v      e     f    v
 011  0000  1      0111  000  1
 101  1110  15/2   1001  111  15/2   
 010  1001  25/32  0110  100  3/4
+110  1111  31/2   1101  000  16
 
 
 Case 1) A
@@ -63,3 +64,22 @@ e = 0110, E = 6 - 7 = -1, 2^E = 1/2.
 frac = 100 = 1/2.
 M = 1 + 1/2 = 1.5.
 2^E * M = 1/2 * 1.5 = 0.75 = 3/4
+
+Case 4) A
+110  1111
+exp = 6, frac = 1/2 + 1/4 + 1/8 + 1/16 = 15/16.
+Е = e - Bias = 6 - 3 = 3.
+2^E = 8.
+M = 1 + frac = 31/16.
+Value = 2^E * M = 8 * 31/16 = 31/2.
+
+Case 4) B
+31/2 = 15.5.
+It should be either 15 or 16?
+We need M to be equal 1 and 2^E equal to 16.
+E should be equal to 4.
+e = 1011 = 11.
+E = 11 - 7 = 4.
+frac should be 0, frac = 000 = 0
+M = 1 + frac = 1
+2^E * M = 16 * 1 = 16 = Value.
