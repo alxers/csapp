@@ -18,7 +18,7 @@ e    f     v      e     f    v
 101  1110  15/2   1001  111  15/2   
 010  1001  25/32  0110  100  3/4
 110  1111  31/2   1101  000  16
-000  0001  1/128
+000  0001  1/64  0001  000  1/64
 
 
 Case 1) A
@@ -96,12 +96,9 @@ frac = 1/16 = M
 2^E * M = 1/4 * 1/16 = 1/64
 
 Case 5) B
-1/128 = 0.0078125
-The least possible frac in Format B is 001, which is 1/16.
-Is it possible to make 2^E = 1/8 ?
-E should be equal to -3
-Since Bias = 7, then exp should be equal to 4 or 0100 in binary.
-But in that case we can't get 1/16, because all e's won't be equal to 0 and it's not denormalized special case.
-We'd get M = 1 + frac = 1 + 1/16 = 17/16.
-Instead we can make all e = 0000 = 0 and frac = 100 = 1/2. (?)
-
+1/64 = 0.015625
+If we set e = 0001 = 1, then E = e - Bias = 1 - 7 = -6.
+2^E = 2^(-6) = 1/64.
+Since it's normalized, then M = 1 + frac.
+frac = 000 => M = 1 + 0 = 1
+Value = 2^E * M = 1/64.
