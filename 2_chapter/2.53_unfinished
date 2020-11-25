@@ -9,4 +9,11 @@ You cannot use any include files (such as math.h), but you can make use of the
 fact that the largest finite number that can be represented with double precision
 is around 1.8 * 10^308.
 
-1. #define NEG_ZERO -0.0 (can this be as simple as that or not?)
+Solution:
+
+#define NEG_ZERO -0.0 (can this be as simple as that or not?) <-- Wrong! (implement this last)
+
+* IEEE standard specifies conventions that attempt to be reasonable. For example, 1/ -0 is
+defined to yield -inf, while 1/ +0 is defined to yield +inf.
+
+Not clear how to use this information to deduce the answer for the first question 1e400 ???
