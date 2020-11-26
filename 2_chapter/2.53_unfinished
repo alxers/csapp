@@ -17,3 +17,5 @@ Solution:
 defined to yield -inf, while 1/ +0 is defined to yield +inf.
 
 Not clear how to use this information to deduce the answer for the first question 1e400 ???
+We assume that 1e400 overflows to infinity (why to infinity???)
+Why can't this be exactly as IEEE standard says^ 1/+0?
