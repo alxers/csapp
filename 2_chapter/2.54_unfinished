@@ -11,3 +11,17 @@ E. f == -(-f)
 F. 1.0/2 == 1/2.0
 G. d*d >= 0.0
 H. (f+d)-f == d
+
+Solution:
+A. x == (int)(double) x.
+x is an int, converting int to double is ok. The exact value can be preserved.
+Converting it back to int should not create any issues.
+True
+
+B. x == (int)(float) x.
+True
+
+C. d == (double)(float) d
+d is double, converting double to float may overflow to +inf or -inf.
+So MAX_DOUBLE will cause the overflow.
+Not true
