@@ -25,3 +25,10 @@ C. d == (double)(float) d
 d is double, converting double to float may overflow to +inf or -inf.
 So MAX_DOUBLE will cause the overflow.
 Not true
+
+D. f == (float)(double) f
+We convert float to double. The exact value can be preserved.
+Then we convert it back to float.
+True
+
+E. f == -(-f)
