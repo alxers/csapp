@@ -32,3 +32,6 @@ Then we convert it back to float.
 True
 
 E. f == -(-f)
+True? (what if f = 0 ?)
+
+F. 1.0/2 == 1/2.0
