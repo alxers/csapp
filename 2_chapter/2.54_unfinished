@@ -38,3 +38,6 @@ F. 1.0/2 == 1/2.0
 
 G. d*d >= 0.0
 If they overflow then it might not be >= 0.0 ?
+
+H. (f+d)-f == d
+(f+d) can overflow? So false?
