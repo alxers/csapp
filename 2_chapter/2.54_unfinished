@@ -19,7 +19,7 @@ Converting it back to int should not create any issues.
 True
 
 B. x == (int)(float) x.
-True
+False (review why)
 
 C. d == (double)(float) d
 d is double, converting double to float may overflow to +inf or -inf.
@@ -35,6 +35,7 @@ E. f == -(-f)
 True? (what if f = 0 ?)
 
 F. 1.0/2 == 1/2.0
+True. Converted to float before applying "==" operator?
 
 G. d*d >= 0.0
 If they overflow then it might not be >= 0.0 ?
