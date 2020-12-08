@@ -19,7 +19,7 @@ Converting it back to int should not create any issues.
 True
 
 B. x == (int)(float) x.
-False (review why)
+False (review why, the answer says when x is TMax. Check the order of type casting?)
 
 C. d == (double)(float) d
 d is double, converting double to float may overflow to +inf or -inf.
@@ -32,7 +32,7 @@ Then we convert it back to float.
 True
 
 E. f == -(-f)
-True? (what if f = 0 ?)
+True
 
 F. 1.0/2 == 1/2.0
 True. Converted to float before applying "==" operator?
