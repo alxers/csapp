@@ -23,6 +23,10 @@ void show_int(int x) {
     show_bytes((byte_pointer) &x, sizeof(int)); //line:data:show_bytes_amp1
 }
 
+void show_short(short x) {
+    show_bytes((byte_pointer) &x, sizeof(short));
+}
+
 void show_float(float x) {
     show_bytes((byte_pointer) &x, sizeof(float)); //line:data:show_bytes_amp2
 }
