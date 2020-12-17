@@ -12,7 +12,7 @@
 int main() {
     // short is 2 bytes, 0x0001 is 16 bits or 2 bytes (each hex is 4 bits)
     short hex = 0x0001;
-    printf("Value of int: %x, %d\n", hex, hex);
+    //printf("Value of int: %x, %d\n", hex, hex);
 
     // Idea is to cast to a type which stores less bytes, f.e. char is 1 byte
     // so on little-endian the most significant bit is "1" (that is stored as 0x1000 ?),
@@ -20,6 +20,10 @@ int main() {
     // On the other hand, if it's a big-endian, then cast will result in 0x00
     // So if value after casting is true (1), then it's a little-endian, otherwise it's a big-endian
    
-    printf("%x", (char *)hex);
+    // Here we take an address of hex (&hex) and cast it to a 'char *' pointer, and then dereferencing
+    // the pointer to get a value
+    
+    // (why can't we just do (char)hex ?)
+    printf("%x", *(char *)&hex);
     return 0;
 }
