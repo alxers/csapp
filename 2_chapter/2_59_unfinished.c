@@ -8,6 +8,8 @@
 int main() {
     int x = 0x89ABCDEF;
     int y = 0x76543210;
+    // Take the least significant byte using the method from 2.58 ?
+    // Do the opposite for y and then concat the results?
     printf("%x", x);
     return 0;
 }
