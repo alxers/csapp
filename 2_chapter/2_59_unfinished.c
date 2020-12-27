@@ -10,6 +10,9 @@ int main() {
     int y = 0x76543210;
     // Take the least significant byte using the method from 2.58 ?
     // Do the opposite for y and then concat the results?
+    
+    // Or maybe mask all the bytes except the least significant (by using something like 0xff and '&')
+    // (or bit shifts???)
     printf("%x", x);
     return 0;
 }
