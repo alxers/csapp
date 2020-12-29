@@ -13,6 +13,9 @@ int main() {
     
     // Or maybe mask all the bytes except the least significant (by using something like 0xff and '&')
     // (or bit shifts???)
-    printf("%x", x);
+    
+    printf("%x\n", x<<24); // ef000000
+    printf("%x\n", y>>8); // 765432
+
     return 0;
 }
