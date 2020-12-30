@@ -8,14 +8,18 @@
 int main() {
     int x = 0x89ABCDEF;
     int y = 0x76543210;
-    // Take the least significant byte using the method from 2.58 ?
-    // Do the opposite for y and then concat the results?
+
+    // Bit shifts seem to give a correct result separately
+    // but how to glue them together?
+    //printf("%x\n", x<<24); // ef000000
+    //printf("%x\n", y>>8); // 765432
     
-    // Or maybe mask all the bytes except the least significant (by using something like 0xff and '&')
-    // (or bit shifts???)
-    
-    printf("%x\n", x<<24); // ef000000
-    printf("%x\n", y>>8); // 765432
+    // Alternative
+    int maskX = 0x000000ff;
+    int maskY = 0xffffff00;
+    int new_x = x & maskX;
+    int new_y = y & maskY;
+    printf("%x\n", new_y | new_x); // 765432ef
 
     return 0;
 }
