@@ -4,6 +4,14 @@
 
 #include <stdio.h>
 
+int fun1(int x, int y) {
+    int maskX = 0x000000ff;
+    int maskY = 0xffffff00;
+    
+    int new_x = x & maskX;
+    int new_y = y & maskY;
+    return new_y | new_x;
+}
 
 int main() {
     int x = 0x89ABCDEF;
@@ -15,11 +23,7 @@ int main() {
     //printf("%x\n", y>>8); // 765432
     
     // Alternative
-    int maskX = 0x000000ff;
-    int maskY = 0xffffff00;
-    int new_x = x & maskX;
-    int new_y = y & maskY;
-    printf("%x\n", new_y | new_x); // 765432ef
+    printf("%x\n", fun1(x, y)); // 765432ef
 
     return 0;
 }
