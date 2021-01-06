@@ -9,6 +9,12 @@
 
 #include <stdio.h>
 
+unsigned int replace_byte(unsigned x, int i, unsigned char b) {
+  // 
+  return 0;
+}
+
+
 int main() {
   return 0;
 }
