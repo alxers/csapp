@@ -10,11 +10,15 @@
 #include <stdio.h>
 
 unsigned int replace_byte(unsigned x, int i, unsigned char b) {
-  // 
+  int mask1 = 0x22222222;
+  int v1 = b | mask1;
+//   int shifted = b << 2;
+  printf("%x\n", v1); // prints 222222ab, but if mask1 has other numbers, it's not "ab" anymore, why?
   return 0;
 }
 
 
 int main() {
+    replace_byte(0x12345678, 2, 0xAB);
   return 0;
 }
